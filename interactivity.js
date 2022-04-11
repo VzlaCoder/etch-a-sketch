@@ -1,4 +1,5 @@
 const grid = document.getElementById('grid')
+const clear = document.getElementById('clearGrid')
 
 function makeGrid(size) {
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`
@@ -16,15 +17,16 @@ function makeGrid(size) {
         gridElement.addEventListener('mousedown', changeColor)
 
         grid.appendChild(gridElement)
-    
     }
 }
 
 function changeColor(e) {
-    if (e.type === 'mouseover' && !mousedown) return
-    else {
     e.target.style.backgroundColor = '#FF0000'
-    }
+}
+
+function clearGrid(e) {
+    grid.innerHTML = ''
+    makeGrid(16)
 }
 
 makeGrid(16)
