@@ -2,3 +2,12 @@
     display: grid;
     max-width: 352px;
 }
+
+button {
+    font-size: 64px;
+}
+
+.btnContainer {
+    justify-content: space-between;
+    align-items: center;
+}
